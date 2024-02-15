@@ -13,7 +13,7 @@ import pandas as pd
 
 
 # Load the Excel file
-df = pd.read_excel("rain.xlsx",sheet_name="trial")
+df = pd.read_excel("rain_15min.xlsx",sheet_name="trial")
 
 # Convert RAINDATE and RAINTIME columns to datetime format
 df['RAINDATE'] = pd.to_datetime(df['RAINDATE'] + ' ' + df['RAINTIME'].str.split('+').str[0], format='%d-%m-%y %H:%M:%S')
